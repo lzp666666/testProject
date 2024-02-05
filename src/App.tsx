@@ -1,24 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { useGSAP } from '@gsap/react';
 import './App.css';
-
+// import IndexHtml from './pages/index'
+import Home from './pages/home'
+import './assets/gsap-brand.css';
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, useGSAP);
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Home />
     </div>
   );
 }

@@ -83,7 +83,7 @@ const useHome = () => {
                 <section id='panel-0' className="panel light panel-one">
                     <div className="video-background">
                         <video autoPlay loop muted playsInline >
-                            <source src="http://www.feedmusic.com/videos/intro.mp4" type="video/mp4" />
+                            <source src={require("../../assets/intro.mp4")} type="video/mp4" />
                         </video>
                     </div>
                     <FontView onStateFont={setIsFontState} />
